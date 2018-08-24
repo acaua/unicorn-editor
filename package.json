@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/draft-js": "^0.10.24",
     "draft-js": "^0.10.5",
     "draft-js-alignment-plugin": "^2.0.3",
     "draft-js-drag-n-drop-plugin": "^2.0.3",
@@ -26,6 +25,7 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
+    "@types/draft-js": "^0.10.24",
     "@types/jest": "^23.3.1",
     "@types/node": "^10.7.1",
     "@types/react": "^16.4.11",
