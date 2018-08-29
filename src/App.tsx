@@ -4,6 +4,7 @@ import "./App.css";
 
 import logo from "./logo.svg";
 
+import ImportRawButton from "./unicorn-editor/ImportRawButton";
 import UnicornEditor from "./unicorn-editor/UnicornEditor";
 
 interface AppState {
@@ -27,16 +28,28 @@ class App extends React.Component<{}, AppState> {
             <h1 className="App-title">Welcome to React</h1>
           </header>
         </div>
-        <UnicornEditor
+        <div
+          style={{
+            border: "1px solid black",
+            display: "flex",
+            margin: 100,
+            minHeight: 200
+          }}
+        >
+          <UnicornEditor
+            editorState={editorState}
+            onChange={this.setEditorState}
+          />
+        </div>
+        <ImportRawButton
           editorState={editorState}
-          onChange={this.onChange}
-          readOnly={true}
+          setEditorState={this.setEditorState}
         />
       </>
     );
   }
 
-  private onChange = (editorState: EditorState) => {
+  private setEditorState = (editorState: EditorState) => {
     this.setState({
       editorState
     });
